@@ -14,7 +14,6 @@ import LoadingSpinner from "./LoadingSpinner";
 // responsive design
 // tests
 
-const filterCat = "https:/www.themealdb.com/api/json/v1/1/filter.php";
 
 const Meal = () => {
   const [url, setUrl] = useState(
@@ -34,7 +33,7 @@ const Meal = () => {
   }, [url]);
 
   const setCategory = (category) => {
-    setUrl(`${filterCat}?c=${category}`);
+    setUrl(`https:/www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
   };
 
   const searchRecipe = (evt) => {
