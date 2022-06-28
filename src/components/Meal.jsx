@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MealItem from "./MealItem";
 import CategoryList from "./CategoryList";
+import LoadingSpinner from "./LoadingSpinner";
 
 // loading state spinner
 // img on page cover and on all images alt names
@@ -62,7 +63,8 @@ const Meal = () => {
         </nav>
         <article>
           <div className="cards">
-            {show ? <MealItem data={item} /> : "not found"}
+
+            {show ? <MealItem data={item} /> : <LoadingSpinner />}
           </div>
         </article>
       </main>
