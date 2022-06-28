@@ -18,7 +18,6 @@ const CategoryList = ({ catName }) => {
       {categories.map(({ strCategory, idCategory }) => {
         return (
           <div
-            className="numBox"
             key={idCategory}
             onClick={() => catName(strCategory)}
           >

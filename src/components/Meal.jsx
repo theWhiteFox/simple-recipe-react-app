@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MealItem from "./MealItem";
 import CategoryList from "./CategoryList";
 import LoadingSpinner from "./LoadingSpinner";
+import Sidebar from "./SideBar";
 
 // loading state spinner
 // img on page cover and on all images alt names
@@ -14,14 +15,15 @@ import LoadingSpinner from "./LoadingSpinner";
 // responsive design
 // tests
 
-
 const Meal = () => {
   const [url, setUrl] = useState(
-    "https:/www.themealdb.com/api/json/v1/1/search.php?f=a"
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
   );
   const [item, setItem] = useState();
   const [show, setShow] = useState(false);
   const [search, setSearch] = useState("");
+
+  const [open, openClose] = useState(false);
 
   useEffect(() => {
     fetch(url)
@@ -33,12 +35,12 @@ const Meal = () => {
   }, [url]);
 
   const setCategory = (category) => {
-    setUrl(`https:/www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+    setUrl(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
   };
 
   const searchRecipe = (evt) => {
     if (evt.key === "Enter") {
-      setUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
+      setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
     }
   };
 
@@ -48,21 +50,24 @@ const Meal = () => {
         <h1>Search Recipe</h1>
       </header>
       <main>
-        <nav>
-          <div className="searchBox">
-            <input
-              type="search"
-              className="search-bar"
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={searchRecipe}
-            />
-          </div>
-          <h1>Category</h1>
-          <CategoryList catName={(category) => setCategory(category)} />
-        </nav>
+        {open ? (
+          <nav>
+            <div className="searchBox">
+              <input
+                type="search"
+                className="search-bar"
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={searchRecipe}
+              />
+            </div>
+            <h1>Category</h1>
+            <CategoryList catName={(category) => setCategory(category)} />
+          </nav>
+        ) : (
+          <button onClick={() => openClose(true)}>Menu</button>
+        )}
         <article>
           <div className="cards">
-
             {show ? <MealItem data={item} /> : <LoadingSpinner />}
           </div>
         </article>
