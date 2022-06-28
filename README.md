@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Simple Recipe React App
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/49b12dcd-52dd-4175-99e3-7099318e7d57/deploy-status)](https://app.netlify.com/sites/thewhitefox-simple-recipes-react/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
