@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  /* defines what 1rem is */
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  padding: 0.4rem;
+  background-color: #2d2013;
+}
+
+header {
+  background-color: #356c0e;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(150, 106, 24);
+  max-width: 100%;
+  padding: 1rem 0.4em;
+}
+
+article {
+  width: 80%;
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-bottom: 1rem;
+}
+
+.search-bar {
+  margin: 1rem 0;
+  max-width: 32rem;
+  width: 100%;
+  height: 4rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0 0.2rem;
+}
+
+.cards {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: #030e12;
+  padding: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card h3 {
+  color: white;
+  font-size: 18px;
+}
+
+.recipe-list-container {
+  display: flex;
+  margin: 2.5rem 0;
+}
+
+.content img {
+  width: 100%;
+  height: 600px;
+}
+
+.content .inner-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: raga(255, 255, 255, 0.8);
+  color: black;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-details {
+  width: 70%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredients,
+.instructions {
+  flex-basis: 50%;
+  text-align: justify;
+}
+
+.ingredients h4 {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+nav h1 {
+  background-color: black;
+  width: 100%;
+  display: inline-block;
+}
