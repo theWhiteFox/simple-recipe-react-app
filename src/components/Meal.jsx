@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MealItem from "./MealItem";
 import CategoryList from "./CategoryList";
 import LoadingSpinner from "./LoadingSpinner";
-import Sidebar from "./SideBar";
 
 // loading state spinner
 // img on page cover and on all images alt names
