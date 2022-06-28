@@ -34,6 +34,7 @@ body {
 header {
   background-color: #356c0e;
   text-align: center;
+  position: relative;
 }
 
 main {
@@ -59,8 +60,18 @@ ul {
   padding-left: 0;
 }
 
-ul li {
-  padding-bottom: 1rem;
+nav ul li {
+  padding: 1rem 0;
+  border-bottom: 3px solid black;
+}
+
+ul li:hover {
+  color: rgb(45, 9, 143);
+}
+
+.sidebar {
+  background-color: peru;
+  transition: left 300ms ease-out;
 }
 
 .search-bar {
@@ -71,7 +82,6 @@ ul li {
   border: none;
   outline: none;
   border-radius: 1rem;
-  padding: 0 0.2rem;
 }
 
 .cards {
@@ -138,59 +148,67 @@ img {
   text-transform: capitalize;
 }
 
-nav h1 {
-  background-color: black;
-  width: 100%;
-  display: inline-block;
+main {
+  position: relative;
 }
 
-button {
+main .btn-menu {
   position: absolute;
-  top: 1%;
-  left: 2%;
+  top: -4rem;
+  left: 0%;
   z-index: 2;
   font-weight: bold;
 }
 
-button, input[type="submit"], input[type="reset"] {
-	background: green;
-	color: inherit;
-  border-radius:5%;
-	border: none;
-	padding: 2px 4px;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-}
-
-button:before {
-  content: " ←"
-}
-
-/* .sticky {
+nav {
   position: relative;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
-*/
+
+.btn-back {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  z-index: 2;
+  font-weight: bold;
+}
+
+nav .btn-menu {
+  /* position: absolute; */
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+  font-weight: bold;
+}
+
+nav > button {
+  z-index: 2;
+  font-weight: bold;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: green;
+  color: inherit;
+  border-radius: 5%;
+  border: none;
+  padding: 2px 4px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button::before {
+  content: " < ";
+}
 
 /* @media screen and (max-width: 799px) {
- nav {
-      display:block;
-  }
-  .hamburger {
-    display: block;
+  button {
     position: absolute;
-    margin:4px;
-    height: 9px;
-    width:60px;
-    background: #d3531a;
-    border-radius: 9px;
-    height: auto;
-  }
-  .hamburger:after {
-    content: " ←"
+    top: 2%;
+    left: 2%;
+    z-index: 2;
+    font-weight: bold;
   }
 }  */
 

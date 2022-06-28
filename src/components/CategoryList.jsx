@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
@@ -17,14 +18,9 @@ const CategoryList = ({ catName }) => {
     <>
       {categories.map(({ strCategory, idCategory }) => {
         return (
-          <div
-            key={idCategory}
-            onClick={() => catName(strCategory)}
-          >
-            <ul>
-              <li>{strCategory}</li>
-            </ul>
-          </div>
+          <li key={idCategory} onClick={() => catName(strCategory)}>
+            {strCategory}
+          </li>
         );
       })}
     </>

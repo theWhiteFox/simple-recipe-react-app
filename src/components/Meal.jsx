@@ -46,13 +46,15 @@ const Meal = () => {
   return (
     <>
       <header>
-        <h1>Search Recipe</h1>
+        <h1>Recipes</h1>
       </header>
       <main>
         {open ? (
           <nav>
+            <button onClick={() => openClose(false)}>Close</button>
             <div className="searchBox">
               <input
+              placeholder="Search"
                 type="search"
                 className="search-bar"
                 onChange={(e) => setSearch(e.target.value)}
@@ -60,10 +62,12 @@ const Meal = () => {
               />
             </div>
             <h1>Category</h1>
-            <CategoryList catName={(category) => setCategory(category)} />
+            <ul>
+              <CategoryList catName={(category) => setCategory(category)} />
+            </ul>
           </nav>
         ) : (
-          <button onClick={() => openClose(true)}>Menu</button>
+          <button className="btn-menu" onClick={() => openClose(true)}>Menu</button>
         )}
         <article>
           <div className="cards">
