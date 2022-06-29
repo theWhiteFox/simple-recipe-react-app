@@ -3,17 +3,6 @@ import MealItem from "./MealItem";
 import CategoryList from "./CategoryList";
 import LoadingSpinner from "./LoadingSpinner";
 
-// loading state spinner
-// img on page cover and on all images alt names
-// locaization
-// www.themealdb.com/api/json/v1/1/ store in a var
-// each endpoint as it's own var - endpoints import
-// default category
-// back button
-// catEnpoint naming
-// responsive design
-// tests
-
 const Meal = () => {
   const [url, setUrl] = useState(
     "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
