@@ -2,6 +2,26 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/49b12dcd-52dd-4175-99e3-7099318e7d57/deploy-status)](https://app.netlify.com/sites/thewhitefox-simple-recipes-react/deploys)
 
+React app built using https://themealdb.com/api.php endpoints:
+- List all meals by first letter www.themealdb.com/api/json/v1/1/search.php?f=a
+- Lookup full meal details by id www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+- List all meal categories www.themealdb.com/api/json/v1/1/categories.php
+- Filter by Category www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+
+## Todo
+- loading state spinner
+- img on page cover and on all images alt names
+- locaization
+- www.themealdb.com/api/json/v1/1/ store in a var
+- each endpoint as it's own var - endpoints import
+- default category
+- back button
+- best pratices - naming
+- responsive design
+- tests
+- install UI framework
+- install Redux
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
