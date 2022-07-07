@@ -9,15 +9,15 @@ React app built using https://themealdb.com/api.php endpoints:
 - Filter by Category www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
 
 ## Todo
-- loading state spinner
+- loading state spinner ✔️
 - img on page cover and on all images alt names
-- locaization
+- localization
 - www.themealdb.com/api/json/v1/1/ store in a var
 - each endpoint as it's own var - endpoints import
-- default category
-- back button
-- best pratices - naming
-- responsive design
+- default category 
+- back button ✔️
+- best practices - naming
+- responsive design ✔️
 - tests
 - install UI framework
 - install Redux
