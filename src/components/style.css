@@ -201,15 +201,3 @@ input[type="reset"] {
 button::before {
   content: " < ";
 }
-
-/* @media screen and (max-width: 799px) {
-  button {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    z-index: 2;
-    font-weight: bold;
-  }
-}  */
-
-/* active on category hide on search */
