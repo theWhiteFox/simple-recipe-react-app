@@ -21,6 +21,7 @@ React app built using https://themealdb.com/api.php endpoints:
 - tests
 - install UI framework
 - install Redux
+- sort categories
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
