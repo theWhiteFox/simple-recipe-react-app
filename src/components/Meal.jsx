@@ -7,17 +7,16 @@ const Meal = () => {
   const [url, setUrl] = useState(
     "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
   );
-  const [item, setItem] = useState();
+  const [mealItem, setMealItem] = useState();
   const [show, setShow] = useState(false);
   const [search, setSearch] = useState("");
-
   const [open, openClose] = useState(false);
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        setItem(data.meals);
+        setMealItem(data.meals);
         setShow(true);
       });
   }, [url]);
@@ -43,24 +42,26 @@ const Meal = () => {
             <button onClick={() => openClose(false)}>Close</button>
             <div className="searchBox">
               <input
-              placeholder="Search"
+                placeholder="Search"
                 type="search"
                 className="search-bar"
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={searchRecipe}
               />
             </div>
-            <h1>Category</h1>
+            <h2>Categories</h2>
             <ul>
               <CategoryList catName={(category) => setCategory(category)} />
             </ul>
           </nav>
         ) : (
-          <button className="btn-menu" onClick={() => openClose(true)}>Menu</button>
+          <button className="btn-menu" onClick={() => openClose(true)}>
+            Menu
+          </button>
         )}
         <article>
           <div className="cards">
-            {show ? <MealItem data={item} /> : <LoadingSpinner />}
+            {show ? <MealItem data={mealItem} /> : <LoadingSpinner />}
           </div>
         </article>
       </main>

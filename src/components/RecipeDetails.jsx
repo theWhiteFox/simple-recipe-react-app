@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import BackButton from "./BackButton"
+import BackButton from "./BackButton";
 
 const RecipeDetails = () => {
   const { MealId } = useParams();
   const [url] = useState(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`
   );
-  const [item, setItem] = useState();
+  const [mealItem, setMealItem] = useState();
 
   useEffect(
     (MealId) => {
       if (MealId !== " ") {
         fetch(url)
           .then((response) => response.json())
-          .then((data) => setItem(data.meals[0]))
+          .then((data) => setMealItem(data.meals[0]))
           .catch((error) => {
             console.error(
               "There has been a problem with your fetch operation:",
@@ -27,53 +27,54 @@ const RecipeDetails = () => {
   );
   return (
     <>
-      {!item ? (
+      {!mealItem ? (
         ""
       ) : (
         <>
           <div className="content">
-            <BackButton/>
-            <img src={item.strMealThumb} alt="" />
+  
+            <BackButton />
+            <img src={mealItem.strMealThumb} alt="" />
             <div className="inner-content">
-              <h1>{item.strMeal}</h1>
+              <h1>{mealItem.strMeal}</h1>
               <p>
-                {item.strArea} {item.strCategory}
+                {mealItem.strArea} {mealItem.strCategory}
               </p>
             </div>
           </div>
           <div className="recipe-details">
             <div className="ingredients">
               <ul>
-              <h2>Ingredients</h2>
+                <h2>Ingredients</h2>
                 <li>
-                  {item.strIngredient1}: {item.strMeasure1}
+                  {mealItem.strIngredient1}: {mealItem.strMeasure1}
                 </li>
                 <li>
-                  {item.strIngredient2}: {item.strMeasure2}
+                  {mealItem.strIngredient2}: {mealItem.strMeasure2}
                 </li>
                 <li>
-                  {item.strIngredient3}: {item.strMeasure3}
+                  {mealItem.strIngredient3}: {mealItem.strMeasure3}
                 </li>
                 <li>
-                  {item.strIngredient4}: {item.strMeasure4}
+                  {mealItem.strIngredient4}: {mealItem.strMeasure4}
                 </li>
                 <li>
-                  {item.strIngredient5}: {item.strMeasure5}
+                  {mealItem.strIngredient5}: {mealItem.strMeasure5}
                 </li>
                 <li>
-                  {item.strIngredient6}: {item.strMeasure6}
+                  {mealItem.strIngredient6}: {mealItem.strMeasure6}
                 </li>
                 <li>
-                  {item.strIngredient7}: {item.strMeasure7}
+                  {mealItem.strIngredient7}: {mealItem.strMeasure7}
                 </li>
                 <li>
-                  {item.strIngredient8}: {item.strMeasure8}
+                  {mealItem.strIngredient8}: {mealItem.strMeasure8}
                 </li>
               </ul>
             </div>
             <div className="instructions">
               <h2>Instructions</h2>
-              <p>{item.strInstructions}</p>
+              <p>{mealItem.strInstructions}</p>
             </div>
           </div>
         </>
