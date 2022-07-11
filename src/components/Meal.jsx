@@ -36,7 +36,7 @@ const Meal = () => {
       <header>
         <h1>Recipes</h1>
       </header>
-      <main>
+      <main class="meals">
         {open ? (
           <nav>
             <button onClick={() => openClose(false)}>Close</button>
