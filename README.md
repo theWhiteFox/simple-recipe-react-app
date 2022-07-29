@@ -54,3 +54,5 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 [Context api vs Redux](https://www.upbeatcode.com/react/when-to-use-context-api-vs-redux/)
+
+[freeCodeCamp store actions reducers](https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/)
