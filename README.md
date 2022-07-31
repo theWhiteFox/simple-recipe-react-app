@@ -53,4 +53,5 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-[Context api vs Redux](https://www.upbeatcode.com/react/when-to-use-context-api-vs-redux/)
+- [Comparing Vuex and Redux by developing an application](https://javascript.plainenglish.io/similarities-and-differences-between-vuex-and-redux-by-developing-an-application-be3df0164b22#:~:text=Vuex%20state%20is%20mutable%2C%20hence,and%20assign%20values%20to%20them.&text=Redux%20uses%20Reducers%2C%20which%20are,manage%20a%20set%20of%20states)
+- [Context api vs Redux](https://www.upbeatcode.com/react/when-to-use-context-api-vs-redux/)
