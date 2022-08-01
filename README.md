@@ -18,7 +18,7 @@ React app built using https://themealdb.com/api.php endpoints:
 - back button ✔️
 - best practices - naming
 - responsive design ✔️
-- tests
+- tests [testing-library react testing library intro/](https://testing-library.com/docs/react-testing-library/intro/)
 - install UI framework
 - install Redux
 - sort categories ✔️
